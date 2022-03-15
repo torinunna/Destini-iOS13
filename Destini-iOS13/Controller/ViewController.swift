@@ -16,7 +16,10 @@ class ViewController: UIViewController {
     
     var storyBrain = StoryBrain()
     
-   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateUI()
+    }
     
     @IBAction func choiceMade(_ sender: UIButton) {
         
@@ -25,11 +28,7 @@ class ViewController: UIViewController {
         updateUI()
         
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        updateUI()
-    }
+
     
     func updateUI() {
         storyLabel.text = storyBrain.getStoryTitle()
